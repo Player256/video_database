@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: youtube-config
+data:
+  SEARCH_QUERY: "latest news"
+  FETCH_INTERVAL: "10"
+  DATABASE_URL: "postgresql+psycopg2://postgres:postgres@db:5432/youtube_db"

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: youtube-database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: youtube-database
+  template:
+    metadata:
+      labels:
+        app: youtube-database
+    spec:
+      containers:
+        - name: youtube-database
+          image: charizarddocker/youtube-database:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: youtube-config
+            - secretRef:
+                name: youtube-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: youtube-service
+spec:
+  selector:
+    app: youtube-database  
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer
