@@ -1,11 +1,11 @@
-````markdown
-# 📺 YouTube Video Fetcher
+
+# YouTube Video Fetcher
 
 This project continuously fetches the latest YouTube videos for a given search query (e.g., "cricket", "latest news"), stores them in a PostgreSQL database, and exposes a paginated API to retrieve them.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Polls YouTube Data API v3 every few seconds (configurable)
 - Stores new videos in a PostgreSQL database
@@ -15,7 +15,7 @@ This project continuously fetches the latest YouTube videos for a given search q
 
 ---
 
-## 🔧 Requirements
+## Requirements
 
 - Docker + Docker Compose  
 - Or: Kubernetes (![Minikube Installation Guide](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download))
@@ -24,7 +24,7 @@ This project continuously fetches the latest YouTube videos for a given search q
 - Add YouTube data v3 API and create credentials to obtain the API key.
 ---
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 Create a `.env` file with:
 
@@ -59,7 +59,7 @@ docker compose down
 
 ---
 
-## ☸️ Kubernetes Deployment
+## Kubernetes Deployment
 
 ### 1. Build & Push Docker Image
 
