@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: youtube-config
 data:
-  SEARCH_QUERY: "latest news"
+  SEARCH_QUERY: "cricket"
   FETCH_INTERVAL: "10"
-  DATABASE_URL: "postgresql+psycopg2://postgres:postgres@db:5432/youtube_db"
+  DATABASE_URL: "postgresql+psycopg2://postgres:postgres@postgres:5432/youtube_db"
