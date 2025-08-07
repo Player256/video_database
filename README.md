@@ -1,9 +1,3 @@
-Here's a clear and complete `README.md` for your YouTube video fetcher project, covering both **Docker Compose** and **Kubernetes** usage.
-
----
-
-## 📘 README.md
-
 ````markdown
 # 📺 YouTube Video Fetcher
 
